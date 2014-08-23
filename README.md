@@ -1,21 +1,21 @@
 # JCrop Plug-in for CONTENTdm 
 
-** JCrop Plug-in for CONTENTdm ** uses a freely available JQuery plug-in tool - JCrop
+The ** JCrop Plug-in for CONTENTdm ** uses a freely available JQuery plug-in tool - JCrop
 (http://deepliquid.com/content/Jcrop.html) - to provide clip functionality to
 CONTENTdm. This version of the tool adds a few other files designed to integrate
 it with CONTENTdm and is comprised of the following files:
 
-Jcrop.gif - used by JCrop to provide initial black background
-jcrop_page.css - styling for the crop page
-jquery.Jcrop.min.js - main JCrop plug-in script (also available from several CDNs)
-jquery.Jcrop.css - styling for JCrop itself (also available from several CDNs)
-crop_image.php - main script integrating JCrop with CDM
-jcrop_button.js - javascript to insert the clip icons on the CDM image toolbar
-toolbar_clip_out.gif - toolbar clip icon, mouseout
-toolbar_clip_over.gif - toolbar clip icon, mouseover
-loader_white.gif - spinner to display while waiting for things to render
-README.md - this file
-LICENSE - MIT license
+* Jcrop.gif - used by JCrop to provide initial black background
+* jcrop_page.css - styling for the crop page
+* jquery.Jcrop.min.js - main JCrop plug-in script (also available from several CDNs)
+* jquery.Jcrop.css - styling for JCrop itself (also available from several CDNs)
+* crop_image.php - main script integrating JCrop with CDM
+* jcrop_button.js - javascript to insert the clip icons on the CDM image toolbar
+* toolbar_clip_out.gif - toolbar clip icon, mouseout
+* toolbar_clip_over.gif - toolbar clip icon, mouseover
+* loader_white.gif - spinner to display while waiting for things to render
+* README.md - this file
+* LICENSE - MIT license
 
 Steps to implement the JQuery JCrop plug-in with CONTENTdm using the CDM
 Configuration Tool (as of CDM 6.1.4):
