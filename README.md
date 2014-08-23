@@ -1,6 +1,6 @@
 # JCrop Plug-in for CONTENTdm 
 
-The ** JCrop Plug-in for CONTENTdm ** uses a freely available JQuery plug-in tool - JCrop
+The **JCrop Plug-in for CONTENTdm** uses a freely available JQuery plug-in tool - JCrop
 (http://deepliquid.com/content/Jcrop.html) - to provide clip functionality to
 CONTENTdm. This version of the tool adds a few other files designed to integrate
 it with CONTENTdm and is comprised of the following files:
