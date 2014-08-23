@@ -34,9 +34,9 @@ and styles'.
 3) Upload all of the above listed files:
 	a) Click the button 'manage files'.
 	b) Locate the 'jcrop' folder you just created and click on it.
-	c) Click on the 'Upload' tab and upload the files listed above.
-	d) Close file 'manage files' window and click 'save changes' at the bottom.
-Then click 'publish'.
+	c) Click on the add files button in the upper left corner.
+	d) Drag and drop all files into the folder window.
+	e) Return to the files list, close the upload window, and click the Publish button.
 	
 4) Upload the button loader script in order to activate the plug-in for a
 specific collection.
@@ -46,9 +46,8 @@ want it active for every collection then you might want to click on the 'Global
 Settings' tab instead.)
 	b) Go to Custom Pages/Scripts -> Custom Scripts.
 	c) Next to the box under 'Upload Bottom Includes' click on 'Browse'.
-	d) Locate the 'jcrop_button.js' script and upload it.
-	e) Close file 'manage files' window and click 'save changes' at the bottom.
-Then click 'publish'.
+	d) Locate the 'jcrop_button.js' script and drag it to the folder.
+	e) Close file 'upload a file' window and click the Publish button.
 	f) Step #3 needs to be repeated for each collection for which you would like
 the clip tool to be active.
 
