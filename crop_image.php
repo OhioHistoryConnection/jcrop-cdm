@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	echo('<script src="'.$CDM_JQUERY_PATH.'"></script>');
 	echo('</head><body>');
 	echo('<div id="baseimage" style="text-align:center"><div id="loader"><img src="'.$JCROP_PATH.'/loader_white.gif" alt="loader"></div></div>');
-	echo('<img onload="$(\'#baseimage\').hide()" src="'.$CONTENTDM_HOME.'/utils/ajaxhelper/?CISOROOT='.$cdm_collection.'&CISOPTR='.$cdm_show.'&action=2&DMSCALE=100&DMWIDTH='.$targ_w.'&DMHEIGHT='.$targ_h.'&DMX='.$pos_x.'&DMY='.$pos_y.'">"');
+	echo('<img onload="$(\'#baseimage\').hide()" src="'.$CONTENTDM_HOME.'/utils/ajaxhelper/?CISOROOT='.$cdm_collection.'&CISOPTR='.$cdm_show.'&action=2&DMSCALE=100&DMWIDTH='.$targ_w.'&DMHEIGHT='.$targ_h.'&DMX='.$pos_x.'&DMY='.$pos_y.'">');
 	echo('</body></html>');
 	
 	exit;
@@ -65,18 +65,23 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 	$cdm_data_json = json_encode($xml);
 	
 	$image_info = json_decode($cdm_data_json, true);
-	$img_size = 1000;
-	$pct = "20";
+	
 	$imgwidth = $image_info['width'];
 	$imgheight = $image_info['height'];
+	$img_size = 1000;
+	$pct = 20;
 	if($imgwidth > $img_size) {
 		$pct = (($img_size * 100)/$imgwidth);
 		$img_height = round((($imgheight*$pct)/100));
 		//$img_width = round((($imgwidth*$pct)/100));
 		$img_width = $img_size;
 	} else {
-		$img_width = $imgwidth;
-		$img_height = $imgheight;
+		//$img_width = $imgwidth;
+		//$img_height = $imgheight;
+		$pct = (($img_size * 100)/$imgheight);
+		$img_width = round((($imgwidth*$pct)/100));
+		//$img_width = round((($imgwidth*$pct)/100));
+		$img_height = $img_size;
 	}
 	
 }
@@ -149,9 +154,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 			<input type="submit" value="Crop" style="font-size:120%;font-weight:bold;color: #900;" />
 		</form>
 
-		<!-- This is the image we're attaching Jcrop to -->
-		<img onload="$('#baseimage').hide()" src="<?php echo($CONTENTDM_HOME) ?>/utils/getprintimage/collection/<?php echo($cdm_collection) ?>/id/<?php echo($cdm_show) ?>/scale/<?php echo($pct) ?>/width/<?php echo($img_width) ?>/height/<?php echo($img_height) ?>" id="cropbox" />
-		
+		<!-- This is the image we're attaching Jcrop to  -->
+		<img id="cropbox" onload="$('#baseimage').hide()" src="<?php echo($CONTENTDM_HOME) ?>/utils/getprintimage/collection/<?php echo($cdm_collection) ?>/id/<?php echo($cdm_show) ?>/scale/<?php echo($pct) ?>/width/<?php echo($img_width) ?>/height/<?php echo($img_height) ?>" />
 	</div>
 	</div>
 	</div>
