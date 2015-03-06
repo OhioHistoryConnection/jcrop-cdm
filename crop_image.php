@@ -155,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 		</form>
 
 		<!-- This is the image we're attaching Jcrop to  -->
-		<img id="cropbox" onload="$('#baseimage').hide()" src="<?php echo($CONTENTDM_HOME) ?>/utils/getprintimage/collection/<?php echo($cdm_collection) ?>/id/<?php echo($cdm_show) ?>/scale/<?php echo($pct) ?>/width/<?php echo($img_width) ?>/height/<?php echo($img_height) ?>" />
+		<img id="cropbox" onload="$('#baseimage').hide()" src="<?php echo($CONTENTDM_HOME) ?>/utils/ajaxhelper/?action=2&CISOROOT=<?php echo($cdm_collection) ?>&CISOPTR=<?php echo($cdm_show) ?>&DMSCALE=<?php echo($pct) ?>&DMWIDTH=<?php echo($img_width) ?>&DMHEIGHT=<?php echo($img_height) ?>" />
 	</div>
 	</div>
 	</div>
